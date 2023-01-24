@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation With CSS</title>
+    
+    <style>
+        @keyframes bouncing {
+            from{
+                top: 0;
+                left: 0;
+                background-color: blueviolet;
+            }
+            
+            to{
+                top: 230px;
+                left: 530px;
+                background-color: chocolate;
+            }
+            
+        }
+
+        @keyframes sliding {
+            from{
+                top: -70px;
+                left: 530px;
+                background-color: blueviolet;
+            }
+            
+            to{
+                top: 160px;
+                left: 0px;
+                background-color: chocolate;
+            }
+        }
+
+        @keyframes falling{
+          
+            0%{
+                top: -140px;
+                left: 240px;
+                background-color: blueviolet;
+            }
+
+            50%{
+                top: -25px;
+                left: 240px;
+                background-color: aqua;
+            }
+
+            100%{
+                top: 90px;
+                left: 240px;
+                background-color: bisque;
+            }
+    
+
+        }
+
+        .field{
+            width: 600px;
+            height: 300px;
+            background-color: aliceblue;
+            margin: 30px auto;
+        }
+        .ball{
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            background-color: blueviolet;
+            position: relative;
+            animation: bouncing 3s ease-in-out .5s infinite alternate ;
+            animation-play-state: running;
+        }
+
+        .ball2{
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            background-color:aquamarine;
+            position: relative;
+            animation: sliding 3s ease-in-out .5s infinite alternate ;
+            animation-play-state: running;
+        }
+
+        .ball3{
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            background-color:aquamarine;
+            position: relative;
+            animation: falling 3s ease-in-out .5s infinite alternate ;
+            animation-play-state: running;
+        }
+
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Lets Explore Animation</h2>
+    <div class="field">
+        <div class="ball">
+
+        </div>
+        <div class="ball2">
+
+        </div>
+        <div class="ball3">
+
+        </div>
+    </div>
+</body>
+</html>
